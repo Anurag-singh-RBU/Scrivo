@@ -35,8 +35,9 @@ const Navbar = () => {
           <SignedIn>
             <UserMenu/>
           </SignedIn>
-      </div>
-    </nav>
+
+        </div>
+      </nav>
 
     </div>
   );
