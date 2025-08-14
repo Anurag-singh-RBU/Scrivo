@@ -9,18 +9,18 @@ const Navbar = () => {
   return (
     <div>
 
-      <nav className='flex bg-gray-200 p-2'>
+      <nav className='flex py-4'>
         <Link href = '/'>
-          <Image src = '/logo.png' alt = 'Logo' height={50} width={40} className='object-contain'></Image>
+          <Image src = '/logo.png' loading = "lazy" alt = 'Logo' height={50} width={40} className='object-contain'></Image>
         </Link>
         <Link href = '/'>
-          <div className='mt-2 ml-1 text-lg font-extrabold'>SCRIVO</div>
+          <div className='mt-1.5 ml-1 text-lg font-extrabold [font-family:var(--font-geist-mono)]'>SCRIVO</div>
         </Link>
 
         <div className='flex justify-end w-full'>
 
           <Link href = '/project/create'>
-            <Button className = 'flex items-center gap-2 mt-0.5'>
+            <Button className = 'flex items-center gap-2 mt-0.5 cursor-pointer'>
               <PenBox size={18}></PenBox>
               <span>Create Project</span>
             </Button>
@@ -28,7 +28,7 @@ const Navbar = () => {
 
           <SignedOut>
             <SignInButton forceRedirectUrl='/onboarding'>
-              <Button variant={'outline'} className='ml-2 mt-0.5'>Login</Button>
+              <Button variant={'outline'} className='ml-2 mt-0.5 cursor-pointer'>Login</Button>
             </SignInButton>
           </SignedOut>
 
