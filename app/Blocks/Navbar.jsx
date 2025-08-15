@@ -1,11 +1,15 @@
 import { Button } from '@/components/ui/button';
-import { SignedIn, SignedOut, UserButton, SignInButton } from '@clerk/nextjs';
+import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs';
 import { PenBox } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import UserMenu from './UserMenu';
+import { checkuser } from '@/lib/checkuser';
 
-const Navbar = () => {
+const Navbar = async () => {
+
+  await checkuser();
+
   return (
     <div>
 
