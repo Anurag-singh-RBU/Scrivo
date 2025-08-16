@@ -67,7 +67,7 @@ export default function Home() {
         <div className="flex justify-center mt-10">
         <Link href = '/project/create'>
           <Button className = 'flex items-center gap-3 w-full mt-0.5 cursor-pointer'>
-            <span className="[font-family:var(--font-geist-sans)]">Start For Free</span><ArrowRight size={13} className="mt-1"></ArrowRight>
+            <span className="[font-family:var(--font-geist-sans)]">Start For Free</span><ArrowRight size={13}></ArrowRight>
           </Button>
         </Link>
         </div>
