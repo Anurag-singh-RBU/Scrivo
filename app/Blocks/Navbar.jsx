@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import UserMenu from './UserMenu';
 import { checkuser } from '@/lib/checkuser';
+import UserLoading from './UserLoading';
 
 const Navbar = async () => {
 
@@ -43,6 +44,8 @@ const Navbar = async () => {
         </div>
       </nav>
 
+      <UserLoading/>
+      
     </div>
   );
 };

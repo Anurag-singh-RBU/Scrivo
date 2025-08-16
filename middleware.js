@@ -1,14 +1,21 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
-const PROTECTED_PATHS = createRouteMatcher(["/onboarding(.*)", "/organisation(.*)", "/project(.*)", "/issue(.*)"]);
+const isProtectedRoute = createRouteMatcher(["/project(.*)", "/issue(.*)"]);
 
 export default clerkMiddleware((auth , req) => {
 
-  if(!auth.userId && PROTECTED_PATHS(req)){
+  if(!auth.userId && isProtectedRoute(req)){
 
     return auth().redirectToSignIn();
 
   }
+
+  // if(auth().userId && !auth().orgId && req.nextUrl.pathname !== "/onboarding" && req.nextUrl.pathname !== "/"){
+
+  //   return NextResponse.redirect(new URL("/onboarding", req.url));
+
+  // }
+
 });
 
 export const config = {
