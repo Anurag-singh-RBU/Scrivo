@@ -26,13 +26,13 @@ const Navbar = async () => {
           <Link href = '/project/create'>
             <Button className = 'flex items-center gap-2 mt-0.5 cursor-pointer'>
               <PenBox size={18}></PenBox>
-              <span>Create Project</span>
+              <span className='[font-family:var(--font-geist-sans)]'>Create Project</span>
             </Button>
           </Link>
 
           <SignedOut>
             <SignInButton forceRedirectUrl='/onboarding'>
-              <Button variant={'outline'} className='ml-2 mt-0.5 cursor-pointer'>Login</Button>
+              <Button variant={'outline'} className='ml-2 mt-0.5 cursor-pointer [font-family:var(--font-geist-sans)]'>Login</Button>
             </SignInButton>
           </SignedOut>
 
