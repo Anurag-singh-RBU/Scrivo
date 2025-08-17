@@ -5,14 +5,11 @@ import Navbar from "./Blocks/Navbar";
 import { Marquee } from "@/components/magicui/marquee";
 import Features from "./Blocks/Features";
 import {Highlighter} from "@/components/magicui/highlighter";
-import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { BoxReveal } from "@/components/magicui/box-reveal";
 import { LineShadowText } from "@/components/magicui/line-shadow-text";
 import { RainbowButton } from "@/components/magicui/rainbow-button";
 import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
-import { File, Settings, Search } from "lucide-react";
 
 export default function Home() {
 

@@ -55,14 +55,11 @@ export default function NavbarWithSidebar() {
             <SignInButton forceRedirectUrl='/onboarding'>
               <Button variant={'outline'} className='ml-2 mt-0.5 cursor-pointer [font-family:var(--font-geist-sans)]'>Login</Button>
             </SignInButton>
-          </SignedOut>
+        </SignedOut>
 
-          <SignedIn>
-            <UserMenu/>
-          </SignedIn>
-        <div className="flex sm:hidden w-auto ml-4">
-            <AnimatedThemeToggler></AnimatedThemeToggler>
-        </div>
+        <SignedIn>
+        <UserMenu/>
+        </SignedIn>
     </div>
     </div>
   );
