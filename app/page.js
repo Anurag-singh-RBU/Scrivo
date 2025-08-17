@@ -192,7 +192,7 @@ export default function Home() {
           ))}
         </Marquee>
         </div>
-        <div className="flex sm:flex-row flex-col justify-center sm:mt-20 mt-10 sm:px-4 px-6 items-center w-full h-auto">
+        <div className="flex sm:flex-row flex-col justify-center sm:mt-20 mt-10 sm:px-0 px-6 items-center w-full h-auto">
         <div className="items-center max-w-4xl justify-center overflow-hidden [font-family:var(--font-jetbrains)]">
           <BoxReveal boxColor={"#5046e6"} duration={0.5}>
             <p className="sm:text-[3.5rem] text-[3rem] w-full font-bold">
@@ -217,44 +217,37 @@ export default function Home() {
             </div>
           </BoxReveal>
 
-          <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-            <div className="mt-8 [font-family:var(--font-jetbrains)]">
-            <RainbowButton>Get Scrivo Free</RainbowButton>
-            </div>
-          </BoxReveal>
         </div>
         </div>
-        <div className="w-full hidden sm:flex-row flex-col justify-between sm:flex gap-2 mx-auto mt-15 py-2">
+        <div className="w-full hidden sm:flex-row flex-col justify-between sm:flex mx-auto mt-15 py-2">
         <Image src = "/workflow.png" alt = "workflow" loading = "lazy" width={200} height={50} 
-        className="sm:rounded-2xl h-[400px] w-[500px] px-3 sm:px-0"></Image>
+        className="sm:rounded-2xl h-[400px] w-[500px] pl-3 sm:px-8"></Image>
         <div className="relative flex h-[400px] w-full flex-col items-center justify-center overflow-hidden">
-          <OrbitingCircles iconSize={40}>
-            <Icons.whatsapp />
-            <Icons.notion />
-            <Icons.openai />
-            <Icons.googleDrive />
-            <Icons.whatsapp />
+          <OrbitingCircles iconSize={30}>
+            <Icons.whatsapp/>
+            <Icons.notion/>
+            <Icons.openai/>
+            <Icons.googleDrive/>
+            <Icons.whatsapp/>
           </OrbitingCircles>
           <OrbitingCircles iconSize={30} radius={100} reverse speed={2}>
-            <Icons.whatsapp />
-            <Icons.notion />
-            <Icons.openai />
-            <Icons.googleDrive />
+            <Icons.whatsapp/>
+            <Icons.notion/>
+            <Icons.openai/>
+            <Icons.googleDrive/>
           </OrbitingCircles>
         </div>
         </div>
         </div>
       </div>
-      <div className="sm:mt-15 mt-10 p-10 h-[300px] w-full bg-gray-50">
+      <div className="sm:mt-15 mt-10 p-10 h-[350px] w-full bg-gray-50">
         <h2 className="[font-family:var(--font-jetbrains)] text-3xl text-center font-bold leading-11">Ready to Transform Your Workflow ?</h2>
         <p className="text-gray-700 sm:text-[15px] text-sm [font-family:var(--font-jetbrains)] text-center mt-3">
           Join thousands of teams already using <span className="font-bold text-blue-700">SCRIVO</span> to streamline their projects and boost productivity.
         </p>
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-8">
         <Link href = '/project/create'>
-          <Button className = 'flex items-center gap-3 w-full mt-0.5 cursor-pointer'>
-            <span className="[font-family:var(--font-geist-sans)]">Start For Free</span><ArrowRight size={13}></ArrowRight>
-          </Button>
+          <RainbowButton><span className="[font-family:var(--font-geist-sans)]">Start For Free</span></RainbowButton>
         </Link>
         </div>
       </div>
