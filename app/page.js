@@ -144,8 +144,8 @@ export default function Home() {
   ];
 
   return (
-    <div className="h-full bg-white dark:bg-neutral-900 
-    [background:radial-gradient(125%_100%_at_50%_0%,_#FFF_6.32%,_#E0F0FF_29.28%,_#E0F0FF_29.28%,_#E7EFFD_68.68%,_#FFF_100%)] dark:!bg-none">
+    <div className="h-full dark:!bg-none dark:bg-neutral-900 
+    [background:radial-gradient(125%_100%_at_50%_0%,_#FFF_6.32%,_#E0F0FF_29.28%,_#E0F0FF_29.28%,_#E7EFFD_68.68%,_#FFF_100%)]">
       <div className="max-w-4xl mx-auto absolute inset-0 h-full w-full sm:block hidden">
         <div className="absolute inset-y-0 dark:hidden left-0 h-full w-px bg-gradient-to-b from-neutral-300/50 via-neutral-200 to-transparent pointer-events-none"/>
         <div className="absolute inset-y-0 dark:hidden right-0 h-full w-px bg-gradient-to-b from-neutral-300/50 via-neutral-200 to-transparent pointer-events-none"/>
@@ -186,7 +186,7 @@ export default function Home() {
           </BoxReveal>
     
           <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-            <div className="mt-3 sm:text-[15px] text-sm text-justify [font-family:var(--font-geist-sans)] dark:bg-neutral-900">
+            <div className="mt-3 sm:text-[15px] text-sm text-justify [font-family:var(--font-geist-sans)] sm:mb-0 mb-15">
               <p>
                 <span className="font-semibold font-mono">Bring every team under one roof</span> - project management tool designed to enhance productivity.<br/>
                 <div className="h-[10px]"></div>
