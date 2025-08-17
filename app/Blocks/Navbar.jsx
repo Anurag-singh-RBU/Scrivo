@@ -16,7 +16,7 @@ const Navbar = async () => {
 
       <nav className='flex py-4'>
         <Link href = '/'>
-          <Image src = '/logo.png' loading = "lazy" alt = 'Logo' height={50} width={40} className='object-contain'></Image>
+          <Image src = '/logo.png' loading = "lazy" alt = 'Logo' height={40} width={40} className='object-contain'></Image>
         </Link>
         <Link href = '/'>
           <div className='mt-1.5 ml-1 text-lg font-extrabold [font-family:var(--font-geist-mono)]'>SCRIVO</div>
