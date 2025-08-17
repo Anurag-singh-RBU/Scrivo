@@ -41,7 +41,7 @@ export function OrbitingCircles({
               }
             }
             className={cn(
-              `absolute flex size-[var(--icon-size)] transform-gpu animate-orbit items-center justify-center rounded-full`,
+              `absolute flex size-[var(--icon-size)] dark:bg-neutral-900 transform-gpu animate-orbit items-center justify-center rounded-full`,
               { "[animation-direction:reverse]": reverse },
               className
             )}

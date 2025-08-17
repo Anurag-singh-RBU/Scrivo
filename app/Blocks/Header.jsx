@@ -60,6 +60,9 @@ export default function NavbarWithSidebar() {
         <SignedIn>
         <UserMenu/>
         </SignedIn>
+        <div className="flex sm:hidden w-auto ml-4">
+            <AnimatedThemeToggler className="cursor-pointer"></AnimatedThemeToggler>
+        </div>
     </div>
     </div>
   );

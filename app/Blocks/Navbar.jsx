@@ -6,6 +6,7 @@ import Link from 'next/link';
 import UserMenu from './UserMenu';
 import { checkuser } from '@/lib/checkuser';
 import UserLoading from './UserLoading';
+import { AnimatedThemeToggler } from '@/components/magicui/animated-theme-toggler';
 
 const Navbar = async () => {
 
@@ -40,6 +41,9 @@ const Navbar = async () => {
           <SignedIn>
             <UserMenu/>
           </SignedIn>
+          <div className="flex w-auto ml-4 cursor-pointer">
+            <AnimatedThemeToggler className="cursor-pointer"></AnimatedThemeToggler>
+          </div>
 
         </div>
       </nav>
