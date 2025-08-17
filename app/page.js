@@ -192,7 +192,7 @@ export default function Home() {
           ))}
         </Marquee>
         </div>
-        <div className="flex sm:flex-row flex-col justify-center sm:mt-20 mt-10 px-4 items-center w-full h-auto">
+        <div className="flex sm:flex-row flex-col justify-center sm:mt-20 mt-10 sm:px-4 px-6 items-center w-full h-auto">
         <div className="items-center max-w-4xl justify-center overflow-hidden [font-family:var(--font-jetbrains)]">
           <BoxReveal boxColor={"#5046e6"} duration={0.5}>
             <p className="sm:text-[3.5rem] text-[3rem] w-full font-bold">
