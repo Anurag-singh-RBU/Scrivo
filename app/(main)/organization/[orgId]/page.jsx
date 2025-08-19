@@ -76,7 +76,7 @@ const organization = async ({params}) => {
             </p>
             <div className='mb-4 mt-3 flex flex-col sm:flex-row justify-between items-start [font-family:var(--font-geist-mono)]'>
               <div className='flex items-center gap-3'>
-                <Image src={organization.imageUrl || "/logo.png"} alt="Organization Logo" width={30} height={30} className="rounded-full"></Image>
+                <Image src={organization.imageUrl || "/logo.png"} alt="Organization Logo" width={30} height={30} className="rounded-sm"></Image>
                 <span className='text-[25px] font-bold'>{organization.name}</span>
                 </div>
             </div>

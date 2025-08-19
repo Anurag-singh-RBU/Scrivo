@@ -14,6 +14,7 @@ import { BarLoader } from "react-spinners";
 import OrgSwitcher from "@/app/Blocks/OrgSwitcher";
 import useFetch from "@/hooks/user-fetch";
 import { toast } from "sonner";
+import { ChevronLeft } from "lucide-react";
 
 export default function CreateProject(){
 
@@ -84,8 +85,13 @@ export default function CreateProject(){
 
   return (
 
-    <div className="mx-auto py-10">
-      <h1 className="text-6xl text-center font-bold mb-8 gradient-title">
+    <div className="overflow-hidden sm:px-8 px-3">
+      <Button className = 'flex [font-family:var(--font-geist-sans)] items-center gap-2 mt-3 cursor-pointer' onClick={() => router.back()}>
+        <ChevronLeft size={13}></ChevronLeft>
+        Back
+      </Button>
+    <div className="mx-auto [font-family:var(--font-geist-sans)]">
+      <h1 className="sm:text-6xl text-3xl text-center font-bold mb-8 sm:mt-10 mt-20 [font-family:var(--font-geist-mono)] tracking-tight">
         Create New Project
       </h1>
 
@@ -98,7 +104,7 @@ export default function CreateProject(){
         </div>
 
         <div>
-          <Input id="key" {...register("key")} placeholder="Project Key (Ex : RCYT)"/>
+          <Input id="key" {...register("key")} placeholder="Project Key &nbsp; ( Ex : RCYT )"/>
           {errors.key && (
             <p className="text-red-500 text-sm mt-1">{errors.key.message}</p>
           )}
@@ -115,9 +121,12 @@ export default function CreateProject(){
           <BarLoader className="mb-4" width={"100%"} color="#36d7b7"/>
         )}
 
-        <Button type="submit" size="lg" disabled={loading} className="bg-blue-500 text-white">{loading ? "Creating" : "Create Project"}</Button>
+        <Button type="submit" size="lg" disabled={loading} className="bg-blue-500 text-white [font-family:var(--font-jetbrains)] font-bold">
+          {loading ? "Creating" : "Create Project"}
+        </Button>
         {error && <p className="text-red-500 mt-2">{error.message}</p>}
       </form>
+    </div>
     </div>
   );
 }
