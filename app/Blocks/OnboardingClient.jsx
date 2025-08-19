@@ -21,7 +21,7 @@ export default function OnboardingClient() {
   return (
 
     <div className="flex flex-col items-center justify-center">
-      <OrganizationList hidePersonal/>
+      <OrganizationList hidePersonal afterCreateOrganizationUrl="/organization/:slug" afterSelectOrganizationUrl="/organization/:slug"/>
     </div>
 
   );

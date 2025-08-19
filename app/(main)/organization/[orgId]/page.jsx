@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Header from '@/app/Blocks/Header';
 import React from 'react'
 import {User, Star, Grid, Rocket, Folder, Filter, LayoutDashboard, Users, Target, SlidersHorizontal} from 'lucide-react';
+import OrgSwitcher from '@/app/Blocks/OrgSwitcher';
 
 const organization = async ({params}) => {
 
@@ -38,9 +39,8 @@ const organization = async ({params}) => {
               </li>
 
               <li className="pt-2 text-xs text-gray-500 dark:text-gray-400">Recent</li>
-              <li className="flex items-center space-x-2 bg-blue-100 dark:bg-blue-900 p-2 rounded cursor-pointer">
-                <Image src="/logo.png" alt="Project" width={20} height={20} className="rounded"/>
-                <span>Mental Health Monitoring</span>
+              <li className="flex items-center space-x-2 p-2 rounded cursor-pointer [font-family:var(--font-geist-sans)]">
+                <OrgSwitcher></OrgSwitcher>
               </li>
               <li className="flex items-center space-x-2 cursor-pointer hover:bg-gray-100 p-2 dark:hover:bg-neutral-800 rounded">
                 <Folder className="w-5 h-5" />
@@ -71,16 +71,21 @@ const organization = async ({params}) => {
           </aside>
           
           <div className="flex-1 sm:ml-64 sm:px-6 px-4">
-            <p className='mt-10 [font-family:var(--font-jetbrains)] text-xs text-gray-600 dark:text-gray-200'>Organizations</p>
+            <p className='mt-10 [font-family:var(--font-jetbrains)] text-xs text-gray-600 dark:text-gray-200'>
+              Organizations
+            </p>
             <div className='mb-4 mt-3 flex flex-col sm:flex-row justify-between items-start [font-family:var(--font-geist-mono)]'>
               <div className='flex items-center gap-3'>
-                <Image src={organization.imageUrl} alt="Organization Logo" height = {30} width = {30} className='rounded-md'/>
+                <Image src={organization.imageUrl || "/logo.png"} alt="Organization Logo" width={30} height={30} className="rounded-full"></Image>
                 <span className='text-[25px] font-bold'>{organization.name}</span>
                 </div>
             </div>
             <div className="mb-4">Show Projects</div>
             <div className="mt-8">Show user assigned and reported issues here</div>
           </div>
+          </div>
+          <div className="mt-5 sm:hidden block">
+            <OrgSwitcher></OrgSwitcher>
           </div>
         </div>
       </div>

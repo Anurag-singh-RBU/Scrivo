@@ -39,6 +39,18 @@ export async function getOrganization(slug){
 
   }
 
-  return organization;
+  const plainOrganization = {
+    
+    id: organization.id,
+    name: organization.name,
+    slug: organization.slug,
+    createdAt: organization.createdAt,
+    updatedAt: organization.updatedAt,
+    imageUrl: organization.imageUrl,
+    role: userMembership.role,
+    
+  };
+
+  return plainOrganization;
 
 }
