@@ -17,7 +17,8 @@ const OrgSwitcher = () => {
         <div>
             <SignedIn>
                 <OrganizationSwitcher hidePersonal afterCreateOrganizationUrl="/organization/:slug" afterSelectOrganizationUrl="/organization/:slug" 
-                createOrganizationMode={pathname === "/onboarding" ? "navigation" : "modal"}/>
+                createOrganizationMode={pathname === "/onboarding" ? "navigation" : "modal"}
+                appearance={{elements: {organizationSwitcherTrigger: "dark:text-white text-white" , organizationSwitcherTriggerIcon: "text-gray-500 dark:text-gray-600"}}}/>
             </SignedIn>
         </div>
 

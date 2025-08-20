@@ -4,6 +4,7 @@ import Header from '@/app/Blocks/Header';
 import React from 'react'
 import {User, Star, Grid, Rocket, Folder, Filter, LayoutDashboard, Users, Target, SlidersHorizontal} from 'lucide-react';
 import OrgSwitcher from '@/app/Blocks/OrgSwitcher';
+import ProjectList from '../_components/ProjectList';
 
 const organization = async ({params}) => {
 
@@ -19,7 +20,7 @@ const organization = async ({params}) => {
         <Header></Header>
         <div className="absolute flex inset-x-0 w-full h-px dark:border-[0.5px] bg-gradient-to-r from-neutral-300/50 via-neutral-200 to-neutral-200/50 pointer-events-none"/>
         <div className="flex">
-          <aside id = "sidebar" className="w-64 h-full dark:bg-neutral-900 bg-white border-1 p-4 sm:block hidden left-0 fixed">
+          <aside id = "sidebar" className="w-64 h-full dark:bg-neutral-900/50 bg-white border-1 p-4 sm:block hidden left-0 fixed">
             <ul className="space-y-3 text-sm text-gray-800 dark:text-gray-200 [font-family:var(--font-geist-sans)]">
               <li className="flex items-center space-x-2 cursor-pointer hover:bg-gray-100 dark:hover:bg-neutral-800 p-2 rounded">
                 <User className="w-5 h-5"/>
@@ -39,7 +40,7 @@ const organization = async ({params}) => {
               </li>
 
               <li className="pt-2 text-xs text-gray-500 dark:text-gray-400">Recent</li>
-              <li className="flex items-center space-x-2 p-2 rounded cursor-pointer [font-family:var(--font-geist-sans)]">
+              <li className="flex items-center space-x-2 p-2 bg-blue-100 rounded cursor-pointer [font-family:var(--font-geist-sans)]">
                 <OrgSwitcher></OrgSwitcher>
               </li>
               <li className="flex items-center space-x-2 cursor-pointer hover:bg-gray-100 p-2 dark:hover:bg-neutral-800 rounded">
@@ -80,7 +81,9 @@ const organization = async ({params}) => {
                 <span className='text-[25px] font-bold'>{organization.name}</span>
                 </div>
             </div>
-            <div className="mb-4">Show Projects</div>
+            <div className="mb-4 mt-10">
+              <ProjectList orgId = {organization.id}></ProjectList>
+            </div>
             <div className="mt-8">Show user assigned and reported issues here</div>
           </div>
           </div>

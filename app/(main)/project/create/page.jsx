@@ -44,12 +44,14 @@ export default function CreateProject(){
   const onSubmit = async (data) => {
 
     if(!isAdmin){
+
       alert("Only organization admins can create projects");
       return;
+
     }
 
     const orgId = membership.organization.id;
-    createProjectFn(data, orgId);
+    createProjectFn(data , orgId);
 
   };
 
