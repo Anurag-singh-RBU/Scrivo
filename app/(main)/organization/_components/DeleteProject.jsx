@@ -32,11 +32,11 @@ export default function DeleteProject({projectId}){
 
     if(deleted){
 
-        toast.error("Project deleted successfully !!");
-        router.refresh();
+      toast.error("Project deleted successfully !!");
+      router.refresh();
 
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  
   } , [deleted]);
 
   if(!isAdmin) return null;

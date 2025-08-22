@@ -10,7 +10,7 @@ export default async function Onboarding(){
 
     if(!user) redirect("/sign-in?redirect_url=/onboarding");
 
-    let dbUser = await db.user.findUnique({where: { clerkUserId: user.id }});
+    let dbUser = await db.user.findUnique({where : {clerkUserId : user.id}});
 
     if(!dbUser){
 

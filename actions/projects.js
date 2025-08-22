@@ -105,6 +105,53 @@ export async function getProject(orgId){
 
 }
 
+export async function getProjectById(projectId){
+
+  const {userId} = auth();
+
+  if(!userId){
+
+    throw new Error("Unauthorized");
+
+  }
+
+  try{
+
+    const project = await db.project.findUnique({
+
+      where : {id : projectId}
+
+    });
+
+    if(!project){
+
+      throw new Error("Project not found");
+
+    }
+
+    // Check if user has access to this project
+    const user = await db.user.findUnique({
+      where : {clerkUserId : userId}
+    });
+
+    if(!user){
+      throw new Error("User not found");
+    }
+
+    // You might want to add additional access checks here
+    // For example, check if user is a member of the organization that owns the project
+
+    return project;
+
+  } catch(error){
+
+    console.error("Error getting project:", error);
+    throw new Error(error.message || "Error getting project");
+
+  }
+
+}
+
 export async function deleteProject(projectId){
 
   const {userId} = auth();
@@ -158,7 +205,7 @@ export async function deleteProject(projectId){
 
 }
 
-export async function editProject(projectId, data){
+export async function editProject(projectId , data){
   const {userId} = auth();
 
   if(!userId){

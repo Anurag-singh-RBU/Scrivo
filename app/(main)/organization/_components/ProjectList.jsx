@@ -3,6 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Link from 'next/link';
 import DeleteProject from './DeleteProject';
 import { ShimmerButton } from '@/components/ui/shimmer-button';
+import EditProject from './EditProject';
+import { Button } from '@/components/ui/button';
 
 export default async function ProjectList({orgId}){
 
@@ -12,12 +14,12 @@ export default async function ProjectList({orgId}){
 
     return(
 
-    <p className='[font-family:var(--font-geist-sans)] text-gray-500 dark:text-gray-400 mt-4'>
-        No projects found{' '}
-        <Link href="/project/create" className='text-blue-500 hover:text-blue-600'>
-            &nbsp;&nbsp; Create New
-        </Link>
-    </p>
+        <p className='[font-family:var(--font-geist-sans)] text-gray-500 dark:text-gray-400 mt-4'>
+            No projects found{' '}
+            <Link href="/project/create" className='text-blue-500 hover:text-blue-600'>
+                &nbsp;&nbsp; Create New
+            </Link>
+        </p>
 
     ) 
 
@@ -38,13 +40,12 @@ export default async function ProjectList({orgId}){
             </CardHeader>
             <CardContent>
                 <p className="text-sm -mt-2 text-gray-500 dark:text-gray-300 mb-6 text-justify">{project.description}</p>
+                <div className='flex gap-2'>
                 <Link href={`/project/${project.id}`}>
-                   <ShimmerButton className="shadow-2xl">
-                        <span className="whitespace-pre-wrap text-center [font-family:var(--font-giest-sans)] text-sm leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10">
-                            View Project
-                        </span>
-                    </ShimmerButton>
+                    <Button variant={'default'} className='mt-0.5 cursor-pointer [font-family:var(--font-geist-sans)]'>View Project</Button>
                 </Link>
+                <EditProject projectId = {project.id}></EditProject>
+                </div>
             </CardContent>
             </Card>
 

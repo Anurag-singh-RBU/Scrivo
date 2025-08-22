@@ -2,12 +2,17 @@
 
 import { db } from "@/lib/prisma";
 import { auth , clerkClient } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 
 export async function getOrganization(slug){
 
   const { userId } = auth();
 
-  if(!userId) throw new Error("Unauthorized");
+  if(!userId){
+
+    redirect("/sign-in?redirect_url=/onboarding");
+    
+  }
 
   const user = await db.user.findUnique({where: { clerkUserId : userId }});
 
