@@ -10,6 +10,8 @@ import { BoxReveal } from "@/components/magicui/box-reveal";
 import { LineShadowText } from "@/components/magicui/line-shadow-text";
 import { RainbowButton } from "@/components/magicui/rainbow-button";
 import { OrbitingCircles } from "@/components/magicui/orbiting-circles";
+import {Accordion , AccordionContent , AccordionItem , AccordionTrigger} from "@/components/ui/accordion"
+import Accordian from "./Blocks/Accordian";
 
 export default function Home() {
 
@@ -186,7 +188,7 @@ export default function Home() {
           </BoxReveal>
     
           <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-            <div className="mt-3 sm:text-[15px] text-sm text-justify [font-family:var(--font-geist-sans)] sm:mb-0 mb-15">
+            <div className="mt-3 sm:text-[15px] text-sm text-justify [font-family:var(--font-geist-sans)]">
               <p>
                 <span className="font-semibold font-mono">Bring every team under one roof</span> - project management tool designed to enhance productivity.<br/>
                 <div className="h-[10px]"></div>
@@ -200,7 +202,7 @@ export default function Home() {
         <div className="w-full hidden sm:flex-row flex-col justify-between sm:flex mx-auto mt-15 py-2 dark:bg-neutral-900">
         <Image src = "/workflow.png" alt = "workflow" loading = "lazy" width={200} height={50} 
         className="sm:rounded-2xl h-[400px] w-[500px] pl-3 sm:px-8 dark:bg-neutral-900"></Image>
-        <div className="relative flex h-[400px] w-full flex-col items-center justify-center overflow-hidden">
+        <div className="relative flex h-[400px] sm:mb-10 w-full flex-col items-center justify-center overflow-hidden">
           <OrbitingCircles iconSize={30}>
             <Icons.whatsapp/>
             <Icons.notion/>
@@ -215,6 +217,9 @@ export default function Home() {
             <Icons.googleDrive/>
           </OrbitingCircles>
         </div>
+        </div>
+        <div className = "w-full h-auto mb-20 sm:px-0 px-5">
+          <Accordian/>
         </div>
         </div>
       </div>

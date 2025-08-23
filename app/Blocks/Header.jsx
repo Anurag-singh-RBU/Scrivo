@@ -13,7 +13,7 @@ export default function NavbarWithSidebar() {
 
   return ( 
 
-    <div className="flex items-center w-full justify-between sm:px-6 py-2 px-4 border-0 [font-family:var(--font-geist-sans)]">
+    <div className="flex items-center w-full justify-between sm:px-6 py-4 px-4 border-0 [font-family:var(--font-geist-sans)]">
     <div className="flex items-center space-x-2">
         <Link href="/">
         <Image src="/logo.png" loading="lazy" alt="Logo" height={30} width={30} className="object-contain"/>
