@@ -63,8 +63,8 @@ const Accordian = () => {
         <div key={index} className="border border-gray-200 rounded-md">
           <button
             onClick={() => toggle(index)}
-            className="w-full text-left px-4 py-3 flex justify-between items-center[font-family:var(--font-giest-sans)]">
-            <span className="font-medium text-[15px] sm:text-[15px]">
+            className="w-full text-left px-4 py-3 flex justify-between items-center [font-family:var(--font-giest-sans)]">
+            <span className="font-medium text-[17px] sm:text-[15px]">
               {item.question}
             </span>
             <span className="ml-2">
@@ -72,7 +72,7 @@ const Accordian = () => {
             </span>
           </button>
           {openIndex === index && (
-            <div className="px-4 pb-4 text-[12px] sm:text-[14px] text-gray-600 dark:text-gray-300 [font-family:var(--font-giest-sans)] sm:font-semibold font-medium text-justify">
+            <div className="px-4 pb-4 text-[14px] sm:text-[14px] text-gray-600 dark:text-gray-300 [font-family:var(--font-giest-sans)] sm:font-semibold font-medium text-justify">
               {item.answer}
             </div>
           )}

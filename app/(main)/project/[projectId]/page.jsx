@@ -1,9 +1,21 @@
+import { getProjectById } from '@/actions/projects';
+import { notFound } from 'next/navigation';
 import React from 'react'
 
-const page = () => {
+const ProjectPage = async ({params}) => {
+
+  const projectId = params.projectId;
+  const project = await getProjectById(projectId);
+
+  if(!project) notFound();
+
   return (
-    <div>page</div>
+
+    <div>
+      Project Page
+    </div>
+
   )
 }
 
-export default page
+export default ProjectPage;

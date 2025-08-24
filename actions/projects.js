@@ -119,7 +119,15 @@ export async function getProjectById(projectId){
 
     const project = await db.project.findUnique({
 
-      where : {id : projectId}
+      where : {id : projectId},
+      include : {
+  
+        sprints : {
+  
+          orderBy : {createdAt : "desc"},
+  
+        }
+      }
 
     });
 
@@ -129,23 +137,23 @@ export async function getProjectById(projectId){
 
     }
 
-    // Check if user has access to this project
     const user = await db.user.findUnique({
-      where : {clerkUserId : userId}
+
+      where : {clerkUserId : userId},
+
     });
 
     if(!user){
-      throw new Error("User not found");
-    }
 
-    // You might want to add additional access checks here
-    // For example, check if user is a member of the organization that owns the project
+      throw new Error("User not found");
+
+    }
 
     return project;
 
   } catch(error){
 
-    console.error("Error getting project:", error);
+    console.error("Error getting project :", error);
     throw new Error(error.message || "Error getting project");
 
   }
