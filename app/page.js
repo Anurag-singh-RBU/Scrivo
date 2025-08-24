@@ -218,7 +218,7 @@ export default function Home() {
           </OrbitingCircles>
         </div>
         </div>
-        <div className = "w-full h-auto mb-20 sm:px-0 px-5">
+        <div className = "w-full h-auto mb-20 sm:px-0 px-5 [font-family:var(--font-geist-sans)]">
           <Accordian/>
         </div>
         </div>
