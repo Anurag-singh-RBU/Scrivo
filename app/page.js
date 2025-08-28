@@ -229,7 +229,7 @@ export default function Home() {
           Join thousands of teams already using <span className="font-bold text-blue-700">SCRIVO</span> to streamline their projects and boost productivity.
         </p>
         <div className="flex justify-center mt-8">
-        <Link href = '/project/create'>
+        <Link href = '/onboarding'>
           <RainbowButton><span className="[font-family:var(--font-geist-sans)]">Start For Free</span></RainbowButton>
         </Link>
         </div>
