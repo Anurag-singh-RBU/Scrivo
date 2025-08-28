@@ -14,8 +14,8 @@ const Hero = () => {
         </div>
         <div>
             <h1 className="text-gray-700 dark:text-white/90 [font-family:var(--font-geist-mono)] mt-10 max-w-176 text-center sm:text-5xl text-3xl font-bold [word-spacing:0]">
-                Magically Simplify <br></br> <div className='sm:mt-4 mt-2 whitespace-nowrap'>
-                    <Highlighter action='highlight' color='yellow'><span className='dark:text-neutral-900'>Project</span></Highlighter> and <Highlighter action='highlight'><span className='sm:hidden block dark:text-neutral-900'>Workflow</span><span className='hidden sm:block dark:text-neutral-900'>Management</span></Highlighter>
+                Magically Simplify <br></br> <div className='sm:mt-4 mt-2 whitespace-nowrap flex'>
+                    <span className='dark:text-white/90'>Project</span>&nbsp;and&nbsp;<span className='sm:hidden block dark:text-white/90'>Workflow</span><span className='hidden sm:block dark:text-white/90'>Management</span>
                 </div>
             </h1>
         </div>
