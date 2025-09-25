@@ -1,0 +1,1 @@
+- [x] Fix getProject function in actions/projects.js: Remove invalid organizationId check and handle empty results by returning [] instead of throwing error.

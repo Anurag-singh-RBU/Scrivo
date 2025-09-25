@@ -97,6 +97,13 @@ export async function getProject(orgId){
   const project = await db.project.findMany({
 
     where : {organizationId : orgId},
+    include : {
+      sprints : {
+
+        orderBy : {createdAt : "desc"},
+        
+      }
+    },
     orderBy : {createdAt : "desc"},
 
   });
