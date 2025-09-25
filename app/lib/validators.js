@@ -15,3 +15,10 @@ export const projectSchema = z.object({
     .max(500 , "Description must be 500 characters or less")
     .optional()
 });
+
+export const sprintSchema = z.object({
+  name : z.string().min(1 , "Sprint name is required"),
+  startDate : z.date(),
+  endDate : z.date()
+});
+
