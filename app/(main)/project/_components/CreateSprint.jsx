@@ -2,11 +2,16 @@
 
 import { Button } from '@/components/ui/button'
 import React, { useState } from 'react'
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { sprintSchema } from '@/app/lib/validators';
 import { addDays } from 'date-fns/addDays';
 import { Card, CardContent } from '@/components/ui/card';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { CalculatorIcon, Calendar, Calendar1Icon } from 'lucide-react';
+import { format } from 'date-fns/format';
+import {DayPicker} from 'react-day-picker';
+import "react-day-picker/dist/style.css"
 
 const SprintForm = ({pTitle , pId , pKey , sKey}) => {
 
@@ -56,7 +61,45 @@ const SprintForm = ({pTitle , pId , pKey , sKey}) => {
                                     {errors.name.message}
                                 </p>
                             )}
+                        </div>
+                        <div>
+                            <label className='font-GS'>
+                                Sprint Duration
+                            </label>
+                            <Controller control={control} name='dateRange'
+                            render={((field)=>{
 
+                                return (
+
+                                    <Popover>
+                                        <PopoverTrigger asChild>
+                                            <Button variant='outline'>
+                                                <Calendar size={14}></Calendar>
+                                                {dRange.from && dRange.to?(
+                                                    format(dRange.from , "LLL dd , y") + " - " + format(dRange.to , "LLL dd , y") 
+                                                ) : (
+                                                    <span>Pick a date</span>
+                                                )}
+                                            </Button>
+                                        </PopoverTrigger>
+                                        <PopoverContent align='start' className="w-auto px-5 font-GS">
+                                            <DayPicker mode='range' className = 'text-sm font-GS' selected={dRange} onSelect={(range) => {
+                                               
+                                               if(range?.from && range?.to){
+
+                                                setDRange(range);
+                                                field.onChange(range);
+
+                                               }
+                                            }}>
+                                            </DayPicker>
+                                        </PopoverContent>
+                                    </Popover>
+
+                                )
+
+                            })}>
+                            </Controller>
                         </div>
                     </form>
                 </CardContent>
