@@ -1,5 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Tint&family=Cabin:ital,wght@0,400..700;1,400..700&family=Fira+Code:wght@300..700&family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Sora:wght@100..800&display=swap');
+
+.font-GS {
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+}
 
 @custom-variant dark (&:is(.dark *));
 

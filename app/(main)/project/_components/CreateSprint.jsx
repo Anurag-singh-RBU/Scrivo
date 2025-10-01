@@ -40,20 +40,23 @@ const SprintForm = ({pTitle , pId , pKey , sKey}) => {
         <div>{pTitle}</div>
         
         <div className='flex flex-col gap-3 w-auto items-start mt-4 [font-family:var(--font-geist-sans)]'>
-
-        <Button className="mt-2" onClick = {() => setShow(!show)} variant = {show ? "destructive" : "default"}>{show ? "Cancel" : "Create Sprint"}</Button>       
+        <div className="flex items-end justify-end">
+            <Button className="mt-8 -ml-8 mr-6" onClick = {() => setShow(!show)} variant = {show ? "destructive" : "default"}>{show ? "Cancel" : "Create Sprint"}</Button> 
+        </div>
+            <div className="absolute flex inset-x-0 w-full h-px dark:border-[0.5px] bg-gradient-to-r from-neutral-300/50 via-neutral-200 to-neutral-200/50 pointer-events-none"/>      
         {show && 
             <Card>
                 <CardContent>
                     <form>
                         <div className='flex flex-col gap-2'>
-                            <label htmlFor='name'>Sprint Name</label>
+                            <label htmlFor='name' className='text-xl'>Sprint Name</label>
                             <input id="name" readOnly {...register("name")} className='border border-gray-300 py-2 px-3 rounded-md'/>
                             {errors.name && (
                                 <p className='text-red-500 text-sm font-mono mt-1'>
                                     {errors.name.message}
                                 </p>
                             )}
+
                         </div>
                     </form>
                 </CardContent>
